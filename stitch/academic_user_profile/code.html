@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic User Profile - Campus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-dark": "#1c2632",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- iOS Status Bar Placeholder -->
+<div class="h-12 w-full flex items-center justify-between px-8 pt-4">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs">signal_cellular_alt</span>
+<span class="material-icons text-xs">wifi</span>
+<span class="material-icons text-xs">battery_full</span>
+</div>
+</div>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-5 pb-32">
+<!-- Profile Header Section -->
+<div class="mt-6 flex flex-col items-center">
+<div class="relative">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 bg-background-light dark:bg-background-dark shadow-xl">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" data-alt="Professional portrait of a male academic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwRuMst2oIzM1ZtKG8v0vHLG-eL_UV-HhxwBH0jeC2utY5YxqZ1GyfZTzYH9Hu5-F8bJL1K49RA-nWWHwS9n8c-QV57iO--IQbBGpfJwlthJ71bRXDkuZ8GrxV8tjFRi_4C0vKdesSgl_15KCnmpcvKg4pFcf4wNrgN-hxI39zTs0ZV5vzl1xpsUjQt7UsZ4FcoyVR57cNCfW3UB--iLdK8hWBHIZJXjR0n6qawjCsO4XMVOfd23YFCElJlVUU5dfDOxbHartIhQ"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1 rounded-full border-2 border-background-dark flex items-center justify-center">
+<span class="material-icons text-sm">verified</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h1 class="text-2xl font-bold tracking-tight">Dr. Julian Thorne</h1>
+<p class="text-primary font-medium mt-1">Faculty • Computer Science</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Academic Year 2023-2024</p>
+</div>
+<!-- Profile Actions -->
+<div class="flex gap-3 mt-6 w-full max-w-sm">
+<button class="flex-1 py-3 px-4 rounded-xl bg-primary text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-icons text-lg">emoji_events</span>
+                    Achievements
+                </button>
+<button class="flex-1 py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-700 font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-icons text-lg">edit</span>
+                    Edit Profile
+                </button>
+</div>
+</div>
+<!-- Bio Section -->
+<section class="mt-10">
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-lg font-bold">Bio</h2>
+<button class="text-primary text-xs font-semibold">AI INSIGHT</button>
+</div>
+<div class="bg-white dark:bg-surface-dark p-4 rounded-xl shadow-sm">
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                    Passionate researcher specializing in AI Ethics and Human-Computer Interaction. Currently focused on developing faculty-safe collaboration frameworks that empower students while ensuring data privacy and academic integrity.
+                </p>
+</div>
+</section>
+<!-- Skills & Interests -->
+<section class="mt-8">
+<h2 class="text-lg font-bold mb-4">Skills &amp; Interests</h2>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium">Neural Networks</span>
+<span class="px-4 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-medium">Data Privacy</span>
+<span class="px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-sm font-medium">UX Research</span>
+<span class="px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-sm font-medium">Mentorship</span>
+<span class="px-4 py-1.5 rounded-full bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 text-sm font-medium">Ethics</span>
+</div>
+</section>
+<!-- Current Projects -->
+<section class="mt-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Current Projects</h2>
+<span class="text-xs text-slate-500 uppercase tracking-widest">3 Active</span>
+</div>
+<div class="space-y-4">
+<!-- Project 1 -->
+<div class="bg-white dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-transparent hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-base">Project Minerva</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Cross-department AI Audit</p>
+</div>
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">In Progress</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex -space-x-2">
+<img class="w-7 h-7 rounded-full border-2 border-surface-dark object-cover" data-alt="Female team member portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQnqtaBwdPoiHATfzU3DIFs_aUVvkC20iAr6mX72XBD-Iny1MOvumR_bqCTUVd8AwUMMf4s_OBDKaKhLd9whyhUcExaT4RK33YMfho5aP3fPu3zphPzIZ2_f4QVbAcQ7wT_oL95FPlwdnGvcZ_oiiZZtSUhHIwCC09ls5CLbhpfhbaKpYY4TMcCLmQ-YQC0N-HmXiYqvCk7EpfQBUm-5LnwnJlM88AJjIZR125QEBTeUcf5jeHc9rUfgUfrXhES8Ltju_jFgWug"/>
+<img class="w-7 h-7 rounded-full border-2 border-surface-dark object-cover" data-alt="Male team member portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwxl9MJTCj_rVri9RBqHDUncMfWXsPB4fjhYaIjrL4vyTk-UtgjAWVLFdJ5Lvq2koMjfGg3P6me8GCbmW6X5xHCXrYmGaoJomS4w3I5AkPqUMVkqbM5p0Kb_ozS25d3VhKf7YLnfQylaPLBxaY869G3LYkqZGU9e_W-9E__9fLGWj7hzvqUYsysigrRHA-7PBvD8JWxhO3TjyZw-mZF3P4g_UebRMoxFKByaUf63ae8Xq1xTVPRBNAyPHOqTwhQD5g8pjTyWQ-A"/>
+<div class="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-700 border-2 border-surface-dark flex items-center justify-center text-[10px] font-bold">+4</div>
+</div>
+<div class="w-24 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-white dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-transparent">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-base">Ethical Dataset V2</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Research Publication Phase</p>
+</div>
+<span class="px-2 py-1 bg-yellow-500/10 text-yellow-500 text-[10px] font-bold rounded uppercase">Review</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex -space-x-2">
+<img class="w-7 h-7 rounded-full border-2 border-surface-dark object-cover" data-alt="Profile photo of researcher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_KtbKU3IoDq5Wh8M96Iq0AG_i8OzPX-QhsItjQ_FLq7c17BfBiGvBXPC6H3WVSiCa2OVk4xa8QHdZvgTe-qTP-6uXhA4NTSEmAaWV1piITmcip70rkAMk7uRovnRDKANTGmPGJdT6piT2guQr2NVDsHDvwfXFgRiujVN64dVPD3Q8gtiwkFxUIX8zuuGy46gJ-TaI692418HRFyKeGH3mwEJQ-PO4_AEdQo5FAV40K4v6r_tUcrvA5KFXTqqjjNAWe_8vUMOZpw"/>
+<div class="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-700 border-2 border-surface-dark flex items-center justify-center text-[10px] font-bold">+1</div>
+</div>
+<div class="w-24 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[90%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- iOS Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full ios-blur bg-white/80 dark:bg-background-dark/80 border-t border-slate-200 dark:border-slate-800 pb-8 pt-2">
+<div class="flex justify-around items-center px-4">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">search</span>
+<span class="text-[10px] font-medium">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center -mt-6 shadow-lg shadow-primary/40 text-white">
+<span class="material-icons">add</span>
+</div>
+<span class="text-[10px] font-medium mt-1">Collab</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">forum</span>
+<span class="text-[10px] font-medium">Messages</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">person_outline</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+<!-- Home Indicator -->
+<div class="w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mt-4"></div>
+</nav>
+</body></html>

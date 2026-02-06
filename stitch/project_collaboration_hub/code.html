@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Collaboration Hub - Project Team Formation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Main Container (iOS Phone Form Factor) -->
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Collaboration Hub</h1>
+<div class="flex w-12 items-center justify-end relative">
+<button class="flex items-center justify-center rounded-lg h-12 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-3 right-1 flex h-2 w-2 rounded-full bg-red-500"></span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<!-- AI Recommendation Hero -->
+<div class="p-4">
+<div class="relative bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[120px] shadow-xl overflow-hidden group" data-alt="Modern collaborative workspace with students and technology" style='background-image: linear-gradient(0deg, rgba(16, 24, 34, 0.95) 0%, rgba(19, 109, 236, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtPkZ_hbfDLo53tkTm8CJ7X4dO-UwPDh7nnQqxhk3yrY-F9dmEMvhH1u8vahunq7o6W1HV9CygoGtPY4_xouVPLxxfzxm1rTKHtQSQwwpbFWomg3RKnq0aruWW2O3X-2LImC-WOVanaDGtqVIaOUZ2-IHA3crhfnQCeJxDyZrd1-0ItKqi7f2WXdRL9YmH38VqPF5YUJNXKdqkvwREm73rl3eIzOFjjvNwsd0w1XULb1cSkn9AQjoxniMurVFpDxHk6rU4LnlVGA");'>
+<div class="flex w-full flex-col gap-4 p-5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+<p class="text-primary text-xs font-bold uppercase tracking-wider">AI Team Recommendation</p>
+</div>
+<h2 class="text-white tracking-tight text-2xl font-bold leading-tight">Autonomous Drone Mapping</h2>
+<p class="text-slate-300 text-sm font-medium leading-relaxed">Matches your Python and Computer Vision expertise. Highly active team with 3/5 slots filled.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 flex cursor-pointer items-center justify-center rounded-lg h-11 px-4 bg-primary text-white text-sm font-bold tracking-wide">
+                                Match Details
+                            </button>
+<button class="flex aspect-square cursor-pointer items-center justify-center rounded-lg h-11 bg-white/10 text-white backdrop-blur-sm">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Search and Filter -->
+<div class="px-4 py-3 sticky top-[68px] z-40 bg-background-light dark:bg-background-dark">
+<div class="flex flex-col gap-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-[#9da8b9] flex border-none bg-white dark:bg-[#282f39] items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-[#282f39] text-slate-900 dark:text-white focus:ring-0 h-full placeholder:text-[#9da8b9] px-4 rounded-r-xl text-base font-normal leading-normal" placeholder="Skills, department, or advisor"/>
+</div>
+</label>
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1 rounded-full bg-primary/20 text-primary border border-primary/30 px-4">
+<span class="text-sm font-semibold leading-normal">Engineering</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1 rounded-full bg-white dark:bg-[#282f39] text-slate-600 dark:text-white px-4 border border-slate-200 dark:border-transparent">
+<span class="text-sm font-medium leading-normal">CS</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1 rounded-full bg-white dark:bg-[#282f39] text-slate-600 dark:text-white px-4 border border-slate-200 dark:border-transparent">
+<span class="text-sm font-medium leading-normal">Data Science</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1 rounded-full bg-white dark:bg-[#282f39] text-slate-600 dark:text-white px-4 border border-slate-200 dark:border-transparent">
+<span class="text-sm font-medium leading-normal">Design</span>
+</button>
+</div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight px-4 pb-4 pt-4">Open Projects</h3>
+<!-- Projects Feed -->
+<div class="flex flex-col gap-4 px-4 pb-6">
+<!-- Project Card 1 -->
+<div class="bg-white dark:bg-[#1c2531] rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block">Engineering</span>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Smart City Grid AI</h4>
+</div>
+<div class="bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span> 2/4
+                        </div>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="size-6 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Faculty advisor portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuKyUG0FmCxohXnTc1BZqJ9ziSxu4SlF1Zmct1riAfZ9_ggn70FGBvwbrXNm58cfp-F1P5AYent9H2gwMk_BE0yl4q94e98Ypb_DAA6q4Jr4SqRXP9Ng69kT19YDtBfJfoefqMAIh5hHxZ1cOCEQaDSokXg7MY4LCr1HLQpGny6LvszY_Z7QoFR_Kkdf1GHRYFOViEfNZ2NHRuf5_PrLNNReuh-XlwP2GyvixRfyyhG03XoX92z9lURPDDtC4nFwioswRuDNN4pg"/>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Advisor: Dr. Elena Voss</span>
+<span class="material-symbols-outlined text-blue-400 text-sm" title="Faculty Verified">verified</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Optimizing energy distribution in urban environments using predictive machine learning models.</p>
+<div class="flex flex-wrap gap-2 mb-5">
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">Python</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">PyTorch</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">Sustainability</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2.5 rounded-lg">Join Team</button>
+<button class="flex-1 bg-slate-100 dark:bg-[#282f39] text-slate-900 dark:text-white text-sm font-bold py-2.5 rounded-lg border border-slate-200 dark:border-transparent">View Details</button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-white dark:bg-[#1c2531] rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-1 block">Bio-Sciences</span>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Genetic Data Visualizer</h4>
+</div>
+<div class="bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span> 4/6
+                        </div>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="size-6 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Faculty advisor portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAt9GMbOlqOvbW4tNmvp4ZolftnVvMBDc-HII2_3KWRhOClho62v4ZBt25FttwaMuIHvEiZBUAyOYr9Jjzk-NwJ3MHxszcaIHoq3l_f6uEnT9KRNv5Pk5FkI8dtvnZ4_qoi3LLugmYlaA8bAwfEFQuASEAm3_qM5dXt-GQv4Ph_9MbL0uS8HQ0YGkmx-uFq9EV0JTZW6r4ZHp3ULZwrejnPoub0g7IL0_RykljTSuVVBAUsnnPfNT9vyo_Op8tM60pGAOSdixzkg"/>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Advisor: Dr. Maya Patel</span>
+<span class="material-symbols-outlined text-blue-400 text-sm" title="Faculty Verified">verified</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Creating an interactive 3D platform for researchers to visualize complex genomic sequencing results.</p>
+<div class="flex flex-wrap gap-2 mb-5">
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">React</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">Three.js</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">Biology</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2.5 rounded-lg">Join Team</button>
+<button class="flex-1 bg-slate-100 dark:bg-[#282f39] text-slate-900 dark:text-white text-sm font-bold py-2.5 rounded-lg border border-slate-200 dark:border-transparent">View Details</button>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-white dark:bg-[#1c2531] rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-1 block">Public Policy</span>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Urban Mobility Analysis</h4>
+</div>
+<div class="bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span> 1/3
+                        </div>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="size-6 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400 text-lg">account_circle</span>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Advisor: TBD</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Analyzing public transit accessibility in low-income neighborhoods using GIS and survey data.</p>
+<div class="flex flex-wrap gap-2 mb-5">
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">R</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">GIS</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-[#282f39] text-slate-600 dark:text-slate-300 rounded text-[10px] font-semibold">Statistics</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2.5 rounded-lg">Join Team</button>
+<button class="flex-1 bg-slate-100 dark:bg-[#282f39] text-slate-900 dark:text-white text-sm font-bold py-2.5 rounded-lg border border-slate-200 dark:border-transparent">View Details</button>
+</div>
+</div>
+</div>
+</main>
+<!-- iOS Bottom Tab Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-[#101822]/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-6 py-3 pb-8 z-50">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Hub</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Discover</span>
+</button>
+<div class="relative -top-6">
+<button class="flex items-center justify-center size-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">My Teams</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

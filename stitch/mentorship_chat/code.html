@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mentorship Chat - Campus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<!-- Main Container (Mobile Form Factor) -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-md mx-auto border-x border-slate-200 dark:border-slate-800">
+<!-- Header Section -->
+<header class="bg-white/80 dark:bg-background-dark/80 ios-blur sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800">
+<!-- Top App Bar Component Style -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-primary flex items-center">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<div class="flex flex-col items-center flex-1">
+<h2 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Dr. Sarah Miller</h2>
+<p class="text-primary text-[10px] uppercase tracking-wider font-semibold">Active Now</p>
+</div>
+<button class="text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Profile Info Subheader -->
+<div class="flex p-4 pt-2 gap-4 items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-primary" data-alt="Professional portrait of Dr. Sarah Miller" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBj2kqTtHtedlx6W0wivaVdkxpVKCf1nrKZvivSV2yRnCTmhyEnBEiUoAOF3rkVq319G8zgqQ1NFHUKPqtuK5oDhXbd0Y66ahsB5WBtjPjwn9TARc0wcWcHsO_b4Ri4DBNbLck8nXpXo8HHjn6xHywqV7eT8UDGeyJ1-2X_tINpXwlN965bXoefXLBL9AkPRMRh8KsTLq0diAHt260vd2nknuBfl0-ixKHWJVEMbDRmYMriJL4Y_FhdrDvyqMWGle0TQV3yOrvtNA");'></div>
+<div class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-background-dark"></div>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Professor of Economics</p>
+<p class="text-slate-400 dark:text-slate-500 text-[11px] font-normal leading-tight">Faculty Mentor • Research Ethics Board</p>
+</div>
+<button class="bg-primary/10 dark:bg-primary/20 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+<!-- Tabs/Utility Bar -->
+<div class="flex border-t border-slate-100 dark:border-slate-800/50 justify-between">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-2 pt-3 flex-1" href="#">
+<p class="text-xs font-bold tracking-wide">Chat</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-400 pb-2 pt-3 flex-1" href="#">
+<p class="text-xs font-bold tracking-wide">Files</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-400 pb-2 pt-3 flex-1" href="#">
+<p class="text-xs font-bold tracking-wide">Goals</p>
+</a>
+</div>
+</header>
+<!-- Main Chat Area -->
+<main class="flex-1 overflow-y-auto p-4 space-y-6">
+<!-- Date Divider -->
+<div class="flex justify-center">
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-600 bg-slate-100 dark:bg-slate-900/50 px-3 py-1 rounded-full uppercase tracking-widest">Today</span>
+</div>
+<!-- Goal Tracker Inline Update -->
+<div class="bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 rounded-xl p-4 shadow-sm">
+<div class="flex justify-between items-center mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">track_changes</span>
+<p class="text-slate-900 dark:text-white text-xs font-bold">Thesis Progress</p>
+</div>
+<p class="text-primary text-[10px] font-bold">65%</p>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5 mb-2">
+<div class="bg-primary h-1.5 rounded-full" style="width: 65%;"></div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-[10px]">Current Milestone: Chapter 3 Initial Draft Completion</p>
+</div>
+<!-- Mentor Message -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<div class="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 p-3 rounded-2xl rounded-tl-none">
+<p class="text-sm leading-relaxed">Hello Julian, I've reviewed your bibliography. The references for the market analysis section need a bit more depth. Have you looked at the 2023 IMF reports?</p>
+</div>
+<span class="text-[10px] text-slate-400 ml-1">10:14 AM</span>
+</div>
+<!-- Scheduled Meeting Card (Actionable) -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-slate-900 dark:bg-slate-800 p-4 shadow-lg border border-slate-800 dark:border-slate-700">
+<div class="flex flex-col justify-between flex-1">
+<div>
+<p class="text-primary text-[10px] font-bold uppercase tracking-tighter mb-1">Upcoming Meeting</p>
+<p class="text-white text-sm font-bold leading-tight">Thesis Review Session</p>
+<p class="text-slate-400 text-[11px] font-normal leading-normal mt-1">Today at 2:00 PM (30 min)</p>
+</div>
+<button class="mt-3 flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white gap-2 text-xs font-bold hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">videocam</span>
+<span>Join via Zoom</span>
+</button>
+</div>
+<div class="w-24 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Digital calendar icon and workspace preview" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5dpEdgf2q0Uoy2jYz3lFyIA1gJ3StW5KHquk-Q3bSpQ4f5BHNLQ5_8vRrrsyQquq6ku-H7b_ujI9_SwCLp-sZv74wpGBEBSpiyG1SI4rtAG9hjTS5TOt0X_Cb4ldiCHywe-iR4DpdPljcrg452m5TtlVaog5chmqLnipkcgdG_9-UTxZjnyN1rpaMg0oILGgNJnLNjjVE7_dG-v7aKOnmPv5FnXOrdgzt1DCZLSKy3WQ7_rLgT6rpAIhuTY997eBHRu4Mz11I8Q");'></div>
+</div>
+<!-- Student Message -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+<div class="bg-primary text-white p-3 rounded-2xl rounded-tr-none">
+<p class="text-sm leading-relaxed">Thank you, Dr. Miller. I just uploaded the revised document with the IMF citations included. Let me know if that works.</p>
+</div>
+<span class="text-[10px] text-slate-400 mr-1 text-right flex items-center gap-1">
+                    Read <span class="material-symbols-outlined text-[12px] text-primary">done_all</span>
+</span>
+</div>
+<!-- Shared File Widget -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3 rounded-xl flex items-center gap-3 w-full">
+<div class="bg-red-500/10 text-red-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold truncate">Thesis_Draft_V2_Revised.pdf</p>
+<p class="text-[10px] text-slate-500">2.4 MB • PDF Document</p>
+</div>
+<button class="text-slate-400">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Mentor Typing Indicator -->
+<div class="flex items-center gap-2">
+<div class="flex gap-1 bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded-full">
+<div class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-pulse"></div>
+<div class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-pulse [animation-delay:200ms]"></div>
+<div class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-pulse [animation-delay:400ms]"></div>
+</div>
+</div>
+</main>
+<!-- Message Input Bar -->
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 p-4 pb-8">
+<div class="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 rounded-2xl p-2 px-3 border border-slate-200 dark:border-slate-800/50">
+<button class="text-slate-500 dark:text-slate-400 pb-1">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-1 max-h-32 text-slate-800 dark:text-slate-200" placeholder="Type a professional message..." rows="1"></textarea>
+<button class="bg-primary text-white h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm shadow-primary/40">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="flex justify-between items-center mt-3 px-1">
+<div class="flex gap-4">
+<button class="flex items-center gap-1 text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                        Schedule
+                    </button>
+<button class="flex items-center gap-1 text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-sm">assignment</span>
+                        New Goal
+                    </button>
+</div>
+<span class="text-[9px] text-slate-400 italic">Academic Workspace Secured</span>
+</div>
+</footer>
+</div>
+</body></html>

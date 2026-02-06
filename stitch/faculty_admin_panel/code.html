@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Faculty Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Status Bar Space (iOS) -->
+<div class="h-12 w-full"></div>
+<!-- Top App Bar -->
+<header class="flex items-center justify-between px-4 py-3 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
+<div class="flex items-center gap-3">
+<div class="size-10 overflow-hidden rounded-full border-2 border-primary/20 bg-cover bg-center" data-alt="Faculty profile picture of a professor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7dpi1gmi8UrNhevTI_ScfreTX4ggorwaDO52lG6NxPfXBa3fP6fRpAQHOyCgaBbxhrRBUPc2PYWIK9kLEDM69a3qrDMyjKnZDuXO1PgUrOfEYky786GcLaklmciuJ2ukBSKbY01fNJDupqTCt0M8BXgcuo56oDN67WUPPnlgBADy-wyoogMq4VVZAudpte_A3iCt0VRCCHPzwjhXTc3BeqxBSiU3wd418KIL0Zw_dQ0XVaaxApQsIRExkNG-m_qYFKe4X-4J5mg')">
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Faculty Admin</h1>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Campus Platform</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 relative">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-2 right-2 size-2.5 rounded-full bg-red-500 border-2 border-background-light dark:border-background-dark"></span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</div>
+</header>
+<!-- Metrics Grid -->
+<section class="px-4 py-4">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 px-1">Priority Tasks</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
+<!-- Pending Approvals -->
+<div class="min-w-[160px] flex-1 flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-[#1c2633] shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary">assignment_late</span>
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded uppercase">Urgent</span>
+</div>
+<div>
+<p class="text-3xl font-bold tracking-tight">12</p>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 leading-tight">Pending Post Approvals</p>
+</div>
+<div class="flex items-center gap-1 text-[#0bda5e] text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+2% vs yesterday</span>
+</div>
+</div>
+<!-- Reported Content -->
+<div class="min-w-[160px] flex-1 flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-[#1c2633] shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-red-500">report</span>
+<span class="text-[10px] font-bold text-red-500 bg-red-500/10 px-1.5 py-0.5 rounded uppercase">Review</span>
+</div>
+<div>
+<p class="text-3xl font-bold tracking-tight text-red-500">5</p>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 leading-tight">Reported Content</p>
+</div>
+<div class="flex items-center gap-1 text-red-500 text-xs font-bold">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Critical priority</span>
+</div>
+</div>
+<!-- Active Projects -->
+<div class="min-w-[160px] flex-1 flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-[#1c2633] shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-amber-500">hub</span>
+</div>
+<div>
+<p class="text-3xl font-bold tracking-tight">28</p>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 leading-tight">Active Projects</p>
+</div>
+<div class="flex items-center gap-1 text-primary text-xs font-bold">
+<span class="material-symbols-outlined text-sm">sync</span>
+<span>4 New today</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="px-4 py-4">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 px-1">Management Tools</h2>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-start gap-3 p-4 bg-primary text-white rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl">campaign</span>
+<span class="text-sm font-bold text-left leading-tight">Broadcast Announcement</span>
+</button>
+<button class="flex flex-col items-start gap-3 p-4 bg-white dark:bg-[#282f39] text-slate-900 dark:text-white rounded-xl border border-slate-200 dark:border-slate-800 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl text-primary">manage_accounts</span>
+<span class="text-sm font-bold text-left leading-tight">Manage User Roles</span>
+</button>
+</div>
+</section>
+<!-- Engagement Analytics Chart Mockup -->
+<section class="px-4 py-4">
+<div class="flex items-center justify-between mb-4 px-1">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Engagement Overview</h2>
+<span class="text-xs font-medium text-primary">This Week</span>
+</div>
+<div class="w-full bg-white dark:bg-[#1c2633] rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+<div class="flex items-end justify-between h-32 gap-2 mb-4">
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[40%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[65%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[50%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[85%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[100%] shadow-lg shadow-primary/30"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[45%]"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Total Activity</p>
+<p class="text-lg font-bold">1,284 <span class="text-[10px] text-[#0bda5e] font-bold">↑ 12%</span></p>
+</div>
+<button class="text-xs font-bold text-primary flex items-center">
+                        Details <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Recent Moderation Queue Preview -->
+<section class="px-4 py-4">
+<div class="flex items-center justify-between mb-4 px-1">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Moderation Queue</h2>
+<button class="text-xs font-bold text-primary">View All</button>
+</div>
+<div class="space-y-3">
+<!-- Queue Item 1 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-[#1c2633] rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="size-12 rounded-lg bg-red-100 dark:bg-red-500/20 flex items-center justify-center text-red-500 shrink-0">
+<span class="material-symbols-outlined">flag</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">Inappropriate Content Report</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Reported by Student AI-Bot • 2m ago</p>
+</div>
+<button class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+<!-- Queue Item 2 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-[#1c2633] rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">rate_review</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">New Research Publication</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Review pending • Dr. Aris Thorne • 15m ago</p>
+</div>
+<button class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Navigation Bar (iOS) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-6 pb-8 pt-3 flex justify-between items-center z-[100]">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[28px]">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+<span class="text-[10px] font-bold">Moderate</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-[28px]">grid_view</span>
+<span class="text-[10px] font-bold">Projects</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-[28px]">bar_chart</span>
+<span class="text-[10px] font-bold">Analytics</span>
+</div>
+</nav>
+<!-- Home Indicator (iOS) -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full z-[101]"></div>
+</div>
+</body></html>
