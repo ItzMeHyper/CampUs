@@ -1,3 +1,4 @@
 stitch/
-
-test.js
+stitch-rn/
+node_modules/
+dist/
